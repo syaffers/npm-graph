@@ -1,0 +1,15 @@
+html, body {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Abril Fatface";
+}
+
+p, ul, li, a, table, th, tr {
+  font-family: "Average Sans";
+}
+
+#info {
+  overflow-y: scroll;
+}
