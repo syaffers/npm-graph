@@ -5,7 +5,7 @@ document.getElementById('the-graph').addEventListener('load', function(){
   // Will get called after embed element was loaded
   svgPanZoom(document.getElementById('the-graph'), {
     viewportSelector: '.svg-pan-zoom_viewport',
-    minZoom: 0.45,
+    minZoom: 0.15,
     fit: true,
     center: true
   });

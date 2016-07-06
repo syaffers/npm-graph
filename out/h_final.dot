@@ -15,23 +15,23 @@ strict digraph  {
 	mkdirp [fillcolor="#1abc9c"];
 	bluebird [fillcolor="#1abc9c"];
 	through2 [fillcolor="#1abc9c"];
-	coffee-script [fillcolor="#1abc9c"];
-	yeoman-generator [fillcolor="#1abc9c"];
+	"coffee-script" [fillcolor="#1abc9c"];
+	"yeoman-generator" [fillcolor="#1abc9c"];
 	moment [fillcolor="#1abc9c"];
 	optimist [fillcolor="#1abc9c"];
 	glob [fillcolor="#1abc9c"];
-	gulp-util [fillcolor="#1abc9c"];
+	"gulp-util" [fillcolor="#1abc9c"];
 	minimist [fillcolor="#1abc9c"];
 	cheerio [fillcolor="#1abc9c"];
-	fs-extra [fillcolor="#1abc9c"];
+	"fs-extra" [fillcolor="#1abc9c"];
 	jade [fillcolor="#1abc9c"];
-	node-uuid [fillcolor="#1abc9c"];
-	body-parser [fillcolor="#1abc9c"];
-	socket.io [fillcolor="#1abc9c"];
+	"node-uuid" [fillcolor="#1abc9c"];
+	"body-parser" [fillcolor="#1abc9c"];
+	"socket.io" [fillcolor="#1abc9c"];
 	jquery [fillcolor="#1abc9c"];
 	redis [fillcolor="#1abc9c"];
 	winston [fillcolor="#1abc9c"];
-	uglify-js [fillcolor="#1abc9c"];
+	"uglify-js" [fillcolor="#1abc9c"];
 	react [fillcolor="#1abc9c"];
 	yosay [fillcolor="#1abc9c"];
 	handlebars [fillcolor="#1abc9c"];
@@ -43,7 +43,7 @@ strict digraph  {
 	yargs [fillcolor="#1abc9c"];
 	gulp [fillcolor="#1abc9c"];
 	mongodb [fillcolor="#1abc9c"];
-	underscore.string [fillcolor="#1abc9c"];
+	"underscore.string" [fillcolor="#1abc9c"];
 	grunt [fillcolor="#1abc9c"];
 	xml2js [fillcolor="#1abc9c"];
 	ejs [fillcolor="#1abc9c"];
@@ -86,7 +86,6 @@ strict digraph  {
 	gulp -> "pretty-hrtime";
 	gulp -> tildify;
 	gulp -> orchestrator;
-	jquery;
 	xml2js -> xmlbuilder;
 	xml2js -> sax;
 	cheerio -> "css-select";
@@ -123,7 +122,6 @@ strict digraph  {
 	express -> "utils-merge";
 	express -> finalhandler;
 	express -> fresh;
-	underscore;
 	"fs-extra" -> "graceful-fs";
 	"fs-extra" -> jsonfile;
 	"fs-extra" -> "path-is-absolute";
@@ -171,11 +169,8 @@ strict digraph  {
 	yosay -> minimist;
 	yosay -> chalk;
 	yosay -> taketalk;
-	redis;
-	ejs;
 	through2 -> xtend;
 	through2 -> "readable-stream";
-	through;
 	"body-parser" -> "type-is";
 	"body-parser" -> "on-finished";
 	"body-parser" -> qs;
@@ -186,7 +181,6 @@ strict digraph  {
 	"body-parser" -> "content-type";
 	"body-parser" -> depd;
 	"body-parser" -> "raw-body";
-	marked;
 	mocha -> debug;
 	mocha -> jade;
 	mocha -> diff;
@@ -297,9 +291,7 @@ strict digraph  {
 	mkdirp -> minimist;
 	react -> envify;
 	react -> fbjs;
-	moment;
 	rimraf -> glob;
-	bluebird;
 	request -> "tough-cookie";
 	request -> "http-signature";
 	request -> qs;
@@ -319,5 +311,4 @@ strict digraph  {
 	request -> "tunnel-agent";
 	request -> "node-uuid";
 	request -> hawk;
-	q;
 }

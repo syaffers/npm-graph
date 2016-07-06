@@ -5,24 +5,26 @@ import pandas as pd
 # ye'olde inits
 j = json.load(open("items.json"))
 j2 = []
-t = []
+names = []
+indegs = []
 g = nx.DiGraph()
 h = nx.DiGraph()
 
 # create the whole graph first and realize it's way too big to plot
 for o in j:
+    g.add_node(o["name"][0])
     for dep in o['dependencies']:
         g.add_edge(o["name"][0], dep)
 
-# find the nodes with the highest degree centrality
-for k, v in nx.in_degree_centrality(g).iteritems():
-    t.append((k, v))
+# find the nodes with the highest in-degree
+for node in g.nodes():
+    names.append(node)
+    indegs.append(g.in_degree(node))
 
 # create a data frame so I don't have to hack too much
-df = pd.DataFrame(t)
-# totally unnecessary filtering to get the top 50
-# I could have just sorted the values....
-s = df[df[1] > df.quantile(0.99965).max()][0].values
+df = pd.DataFrame({"name": names, "indeg": indegs})
+# filtering to get the top 50
+s = df.sort_values('indeg', ascending=False)["name"][:50]
 
 # getting top 50 from the first json array and all its dependencies
 for i in s:
@@ -30,14 +32,10 @@ for i in s:
 
 # show dependencies
 for o in j2:
+    h.add_node(o["name"][0])
     for dep in o['dependencies']:
         h.add_edge(o["name"][0], dep)
 
-# mask dependencies
-# for i, o in enumerate(j2):
-#     for j, dep in enumerate(o['dependencies']):
-#         h.add_edge(o["name"][0], str(i)+str(j))
-
 # make .dot file and use fdp to get the graph, color at your own peril,
 # just too lazy at this point
-nx.nx_agraph.write_dot(h, 'h.dot')
+nx.nx_agraph.write_dot(h, '../out/h.dot')
