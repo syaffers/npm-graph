@@ -10,3 +10,5 @@ some visualizations to help understand the relations better.
 - [Top 50 most depended-upon packages and its dependencies](http://syaffers.github.io/npm-graphs/)
 
 I'm still mining this and creating cooler graphs. Do visit now and again.
+
+Update (2016-07-06): Updated designs and styling and script stuff.
